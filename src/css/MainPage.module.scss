@@ -1,3 +1,59 @@
-div.ntnoop{
-  
+body{
+  font-family: "noto sans kr", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+}
+div.hdrWrap {
+  height: 80px;
+  background-color: #ccc;
+  padding: 20px;
+  line-height: 40px;
+}
+div.section {
+}
+div.sideCheat {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 100%;
+  max-width: 280px;
+  height: 100vh;
+  background-color: #333;
+  transition: all 0.4s;
+  padding: 30px 20px;
+  border-left: 3px solid #f90;
+  .cheatBtn {
+    position: absolute;
+    bottom: 10%;
+    right: 100%;
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    border-radius: 20px 0 0 10px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: #aaa;
+    border: 2px solid #f90;
+    border-right: 0;
+    i {
+      width: 100%;
+      height: 100%;
+      display: block;
+      line-height: 40px;
+      &:hover {
+        color: #fff;
+      }
+    }
+    span {
+      width: 100%;
+      height: 100%;
+      display: none;
+      line-height: 40px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }

@@ -1,0 +1,42 @@
+div.sendMessage {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+}
+
+div.sendMessage form {
+  height: 60px;
+  padding: 10px 0;
+  line-height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+div.sendMessage form span {
+  width: 30px;
+  border-radius: 10px 0 0 10px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+
+div.sendMessage form input {
+  width: calc(100% - 60px);
+  border: 0;
+}
+
+div.sendMessage form button {
+  width: 30px;
+  height: 40px;
+  border: 0;
+  background-color: #fff;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+}
+
+div.sendMessage form button i {
+  color: #000;
+}
+/*# sourceMappingURL=SendMessage.module.css.map */

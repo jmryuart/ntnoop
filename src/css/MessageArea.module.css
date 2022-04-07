@@ -1,0 +1,65 @@
+div.messageArea {
+  color: #333;
+  height: calc(100% - 70px);
+  background-color: #eee;
+  padding: 20px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+}
+
+div.messageArea::-webkit-scrollbar {
+  display: none;
+}
+
+div.messageArea div p {
+  width: calc(100% - 20px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+div.messageArea div p i {
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 0 8px;
+  line-height: 25px;
+}
+
+div.messageArea div p span {
+  text-align: left;
+  padding: 5px;
+}
+
+div.messageArea div p button {
+  display: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+/*# sourceMappingURL=MessageArea.module.css.map */
