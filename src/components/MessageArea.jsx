@@ -19,13 +19,11 @@ const MessageArea = ({ nickName }) => {
       setMyMessage(talking);
     });
   }, []);
-  console.log(nickName);
   return (
     <div className={styled.messageArea}>
       {myMessage.map((list) => (
         <div key={list.id}>
           <>
-            {console.log(list.creatorId)}
             {nickName === list.creatorId ? (
               <p className="mymessage">
                 <Message list={list} />

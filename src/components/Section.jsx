@@ -4,12 +4,13 @@ import Board from "./Board";
 import Home from "./Home";
 import Portfolio from "./Portfolio";
 import { Route } from "react-router-dom";
+import Join from "./Join";
 
-const Section = () => {
+const Section = ({ logFlag ,setNickName }) => {
   return (
     <>
       <Route path="/" exact>
-        <Home />
+        <Home logFlag={logFlag} setNickName={setNickName} />
       </Route>
       <Route path="/about" exact>
         <About />
@@ -19,6 +20,9 @@ const Section = () => {
       </Route>
       <Route path="/board" exact>
         <Board />
+      </Route>
+      <Route path="/join" exact>
+        <Join />
       </Route>
     </>
   );

@@ -11,11 +11,10 @@ import { collection, onSnapshot, query, where } from "firebase/firestore";
 const MainPage = () => {
   const [logFlag, setLogFlag] = useState(false);
   const [nickName, setNickName] = useState(null);
-
+  
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user.uid);
         setLogFlag(true);
         const q = query(
           collection(dbService, "nicknameTable"),
@@ -26,7 +25,6 @@ const MainPage = () => {
             id: doc.id,
             ...doc.data(),
           }));
-          console.log(getNickname[0].nickname);
           setNickName(getNickname[0].nickname);
         });
       } else {
@@ -49,10 +47,10 @@ const MainPage = () => {
     cheatRef.current.style.right = "-280px";
   };
   return (
-    <>
+    <div className={styled.wrap}>
       <Header logFlag={logFlag} setLogFlag={setLogFlag} />
       <div className={styled.section}>
-        <Section />
+        <Section logFlag={logFlag} setNickName={setNickName} />
       </div>
       <div className={styled.sideCheat} ref={cheatRef}>
         <MessageArea nickName={nickName} />
@@ -70,7 +68,7 @@ const MainPage = () => {
           ></span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

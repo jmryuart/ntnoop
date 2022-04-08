@@ -7,7 +7,6 @@
   margin-left: auto;
   background-color: #000;
   color: #fff;
-  font-size: 14px;
 }
 .mymessage i {
   color: #fff;
@@ -16,6 +15,6 @@
   color: #000;
 }
 
-p.mymessage:hover  button{
+p.mymessage:hover button {
   display: block;
 }

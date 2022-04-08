@@ -1,10 +1,11 @@
-body{
+div.wrap{
   font-family: "noto sans kr", sans-serif;
   font-size: 14px;
   font-weight: 300;
   line-height: 20px;
 }
 div.section {
+  display: flex;
 }
 div.sideCheat {
   position: fixed;
