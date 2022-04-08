@@ -1,0 +1,34 @@
+div.hdrWrap {
+  height: 80px;
+  background-color: #ccc;
+  padding: 20px;
+  line-height: 40px;
+}
+
+div.hdrWrap header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.hdrWrap header h1 {
+  cursor: pointer;
+  font-size: 28px;
+}
+
+div.hdrWrap header menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+div.hdrWrap header menu li {
+  font-weight: 500;
+  padding: 0 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Header.module.css.map */

@@ -8,7 +8,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth, dbService } from "../fbase";
 import { collection, onSnapshot, query, where } from "firebase/firestore";
 
-
 const MainPage = () => {
   const [logFlag, setLogFlag] = useState(false);
   const [nickName, setNickName] = useState(null);
@@ -16,7 +15,7 @@ const MainPage = () => {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user.uid)
+        console.log(user.uid);
         setLogFlag(true);
         const q = query(
           collection(dbService, "nicknameTable"),
@@ -27,7 +26,7 @@ const MainPage = () => {
             id: doc.id,
             ...doc.data(),
           }));
-          console.log(getNickname[0].nickname)
+          console.log(getNickname[0].nickname);
           setNickName(getNickname[0].nickname);
         });
       } else {
@@ -35,7 +34,7 @@ const MainPage = () => {
       }
     });
   }, []);
-  console.log(nickName)
+  console.log(nickName);
   const openCheatRef = useRef();
   const closeCheatRef = useRef();
   const cheatRef = useRef();
@@ -51,9 +50,7 @@ const MainPage = () => {
   };
   return (
     <>
-      <div className={styled.hdrWrap}>
-        <Header logFlag={logFlag} setLogFlag={setLogFlag} />
-      </div>
+      <Header logFlag={logFlag} setLogFlag={setLogFlag} />
       <div className={styled.section}>
         <Section />
       </div>
